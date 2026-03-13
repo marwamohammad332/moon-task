@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    --Primarycolor: #3A3845;
+    --Primaryfontfamily: "Inter", sans-serif;
+}
+.header{
+    padding:21.84px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    background-color:whitesmoke
+}
+.menu{
+    display: none;
+}
+.iconlogo{
+    display: none;
+}
+.continer{
+    width:calc( 100% - (13.4% * 2));/* 165px = 13.4% */
+    margin: 0 auto;
+
+}
+.row {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+}
+.list ul{
+    display:flex;
+    gap: 60px ;
+    list-style-type: none;
+}
+.list a{
+    text-decoration-line: none;
+    color: var(--Primarycolor);
+    font-family: var(--Primaryfontfamily);
+    font-size: 14px;
+    font-weight: 400;
+    transition-property: color;
+    transition-duration: 1s;
+}
+.header a:hover{
+    color: rgb(66, 51, 53);
+}
+.icons ul{
+    display: flex;
+    gap: 24px;
+    list-style-type: none;
+}
+.icons li:hover{
+    background-color: rgb(59, 46, 51);
+}
+.icons li{
+    transition: background-color 1s;
+}
+.cart{
+    position: relative;
+}
+.cart a::after{
+    text-align: center;
+    content: '5';
+    position: absolute;
+    bottom: 14px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 5px;
+}
+@media screen and ( min-width:0) and ( max-width:300px ){
+.iconlogo{
+    display: flex;
+}
+.logo{
+    display: none;
+}.menu{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    transition: background-color 1s;
+}
+.menu:hover{
+    background-color: rgb(77, 54, 60);
+}
+.search , .avatar , .heart{
+    display: none;
+}
+.cart{
+    display: block;
+}
+.list{
+    display: none;
+}
+} 
+@media screen and ( min-width:301px ) and ( max-width:700px ){
+.menu{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    transition: background-color 1s;
+}
+.menu:hover{
+    background-color: blue;
+}
+.search , .avatar , .heart{
+    display: none;
+}
+.cart{
+    display: block;
+}
+.list{
+    display: none;
+}
+}
+@media screen and ( min-width:700px ) and ( max-width:890px ) {
+    .list ul{
+    gap: 20px;
+  } 
+  .icons ul{
+    gap: 10px;
+  }
+}
+@media screen and ( min-width:891px ) and ( max-width:955px ) {
+    .list ul{
+    gap: 30px;
+  } 
+  .icons ul{
+    gap: 12px;
+  }
+}
