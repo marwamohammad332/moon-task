@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 html{
+    scroll-behavior: smooth;
     --Primarycolor: #3A3845;
     --Primaryfontfamily: "Inter", sans-serif;
 }
@@ -288,7 +289,7 @@ grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
 }
 .introduction h2{
     font-family: "EB Garamond", serif;
-    margin-top: 50px;
+    margin-top: 35px;
     font-size:  clamp(16px, 3vw, 28px);
     color: var(--Primarycolor);
     line-height:32px;
@@ -311,7 +312,7 @@ grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     color: var(--Primarycolor);
     font-size: clamp(8px, 2vw, 14px);
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     line-height: 20px;
     letter-spacing: 1.3px;
     text-transform: uppercase;
@@ -324,6 +325,9 @@ grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     background-color: black;
 }
 @media screen and ( min-width:0 ) and ( max-width:690px ){
+    .introduction h2{
+        margin-top: 0;
+    }    
     .offers{
         padding: 0;
     }
@@ -423,4 +427,59 @@ grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     .bestsellers .row{
     grid-template-columns: repeat(2,1fr);
 }
+}
+.about{
+    padding: 40px 0;
+}
+.about .row{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(310px,1fr));
+}
+.aboutus{
+    height: 350px;
+    text-align: center;
+}
+.aboutus  div {
+    height: 100%;
+}
+.aboutus img{
+height:100%;
+object-fit: cover;
+display: block;
+}
+@media screen and ( min-width:0 ) and ( max-width:699px ) {   
+   .introduction h2{
+    margin-top: 0;
+   }
+   .aboutus .introduction a{
+    margin-bottom: 0;
+   }
+    .about{
+    padding: 0;
+   }
+   .aboutus img{
+    height:100%;
+    }
+    .aboutus{
+    height: 312px;
+    }
+    .about .continer{
+        width: 100%;
+    }
+    .about .row{
+    grid-template-columns: repeat(1,1fr);
+    }
+    .lastimg{
+    order: 1;
+    }
+}
+@media screen and ( min-width:700px ) and ( max-width:1030px ) {
+ 
+.about .row{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.lastimg{
+    order: 1;
+    }
 }
