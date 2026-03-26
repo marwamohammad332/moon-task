@@ -8,7 +8,7 @@ html {
     scroll-behavior: smooth;
     --Primarycolor: #3A3845;
     --Primaryfontfamily: "Inter", sans-serif;
-    --secondarecolor:#CAC9CF;
+    --secondarecolor: #CAC9CF;
 }
 
 .header {
@@ -224,8 +224,13 @@ html {
     font-size: clamp(7px, 2vw, 14px);
     font-weight: 600;
     line-height: 20px;
+    transition: all 1s;
 }
 
+.hero_text a:hover{
+    background-color:#826F66;
+    color:white;
+}
 @media screen and (min-width:0) and (max-width:768px) {
     .hero {
         flex-direction: column;
@@ -382,12 +387,13 @@ img {
     text-transform: uppercase;
     cursor: pointer;
     transition: color 1s, background-color 1s;
+    padding: 5px;
 
 }
 
 .introduction a:hover {
-    color: #826F66;
-    background-color: rgb(50, 50, 50);
+    color: white;
+    background-color: #826F66;
 }
 
 @media screen and (min-width:0) and (max-width:690px) {
@@ -413,10 +419,11 @@ img {
 }
 
 @media screen and (min-width:700px) and (max-width:1030px) {
-    
+
     .offers {
         padding: 0;
     }
+
     .offers .row {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -443,7 +450,11 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-.bestseller_item, .item{
+
+.bestseller_item{
+    padding: 5px;
+}
+.item {
     box-shadow: 0 0 20px -15px #6c757db6;
 }
 
@@ -586,21 +597,25 @@ img {
     .about {
         padding: 0;
     }
+
     .lastimg {
         order: 1;
     }
 }
-.new_arrivals{
+
+.new_arrivals {
     padding: 40px 0;
     text-align: center;
 }
-.new_arrivals .row{
+
+.new_arrivals .row {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
 }
-.addtocart{
-      font-family: var(--Primaryfontfamily);
+
+.addtocart {
+    font-family: var(--Primaryfontfamily);
     color: var(--Primarycolor);
     font-size: clamp(10px, 2vw, 12px);
     font-weight: 600;
@@ -612,13 +627,15 @@ img {
     border: black solid 1px;
     width: 100%;
     margin-bottom: 40px;
-    transition: background-color 1.2s , color 1.2s;
+    transition: background-color 1.2s, color 1.2s;
     cursor: pointer;
 }
-.item:hover .addtocart{
+
+.item:hover .addtocart {
     background-color: #826f66b5;
     color: white;
 }
+
 @media screen and (min-width:0) and (max-width:400px) {
 
     .new_arrivals .row {
@@ -632,15 +649,18 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-.ourblog{
+
+.ourblog {
     padding: 40px 0;
-    text-align: center;   
+    text-align: center;
 }
-.ourblog .row{
-display: grid;
-grid-template-columns: repeat(auto-fit,minmax(200px,1fr));   
+
+.ourblog .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-.introduction h3{
+
+.introduction h3 {
     font-family: var(--Primaryfontfamily);
     color: #807F86;
     font-size: clamp(10px, 2vw, 18px);
@@ -651,6 +671,7 @@ grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     margin-top: 35px;
     margin-bottom: 24px;
 }
+
 @media screen and (min-width:0) and (max-width:690px) {
     .introduction h3 {
         margin-top: 0;
@@ -674,15 +695,17 @@ grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
 }
 
 @media screen and (min-width:700px) and (max-width:1030px) {
-    
+
     .ourblog {
         padding: 0;
     }
+
     .ourblog .row {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-.signup{
+
+.signup {
     padding: 40px 0;
     text-align: center;
     display: flex;
@@ -691,27 +714,30 @@ grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     align-items: center;
     gap: 24px;
 }
-.signup h3{
+
+.signup h3 {
     font-family: var(--Primaryfontfamily);
     color: #595667;
     font-size: clamp(10px, 2vw, 16px);
     font-weight: 600;
     line-height: 22px;
 }
-.signup h2{
+
+.signup h2 {
     font-family: "EB Garamond", serif;
-    font-size:clamp(17px, 3vw, 28px);
+    font-size: clamp(17px, 3vw, 28px);
     color: var(--Primarycolor);
-    line-height:32px;
+    line-height: 32px;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 700;
 }
-input{
+
+input {
     width: 398px;
     text-align: center;
     padding: 14px 0;
-    border:none;
+    border: none;
     border-bottom: #3A3845 1px solid;
     font-family: var(--Primaryfontfamily);
     color: #595667;
@@ -719,7 +745,8 @@ input{
     font-weight: 400;
     line-height: 24px;
 }
-.signup a{
+
+.signup a {
     margin-top: 8px;
     padding: 12px 24px;
     border: #3A3845 1px solid;
@@ -732,47 +759,56 @@ input{
     letter-spacing: 1.3px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: color 1s ,background-color 2s ;
+    transition: color 1s, background-color 2s;
 
 }
-.signup a:hover{
-    color: #826f66b5;
-    background-color: black;
+
+.signup a:hover {
+    color: white;
+    background-color: #826F66;
 }
-@media screen and ( min-width:0 ) and ( max-width:300px ){
-    input{
+
+@media screen and (min-width:0) and (max-width:300px) {
+    input {
         width: 150px;
     }
-.signup{
-    max-width: 350px;
-    margin: 0 auto;
+
+    .signup {
+        max-width: 350px;
+        margin: 0 auto;
+    }
 }
-}
-@media screen and ( min-width:301px ) and ( max-width:600px ){
-    input{
+
+@media screen and (min-width:301px) and (max-width:600px) {
+    input {
         width: 250px;
     }
-.signup{
-    max-width: 350px;
-    margin: 0 auto;
+
+    .signup {
+        max-width: 350px;
+        margin: 0 auto;
+    }
 }
-}
-.footer{
+
+.footer {
     background-color: var(--Primarycolor);
 }
-.footer .row{
+
+.footer .row {
     display: flex;
     flex-direction: column;
 }
-.footer_top{
+
+.footer_top {
     border-bottom: solid 1px var(--secondarecolor);
     display: flex;
 }
-.Get_started{
+
+.Get_started {
     width: 35%;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
     border-right: solid 1px var(--secondarecolor);
@@ -780,19 +816,23 @@ input{
     margin-left: 80px;
     gap: 24px;
 }
-.Get_started img{
+
+.Get_started img {
     width: fit-content;
 }
-.Get_started p{
+
+.Get_started p {
     color: var(--secondarecolor);
     font-family: var(--Primaryfontfamily);
     font-size: small;
     width: 80%;
 }
-.Get_started a::after{
+
+.Get_started a::after {
     content: "\2192";
 }
-.Get_started a{
+
+.Get_started a {
     text-decoration: none;
     color: var(--secondarecolor);
     border: solid 1px var(--secondarecolor);
@@ -801,9 +841,16 @@ input{
     font-size: x-small;
     text-transform: uppercase;
     margin-top: 8px;
+    transition: all 1s;
 }
-.links{
-    display:flex;
+
+.Get_started a:hover {
+    background-color: var(--secondarecolor);
+    color: var(--Primarycolor);
+}
+
+.links {
+    display: flex;
     gap: 62px;
     margin-top: 58px;
     margin-left: 80px;
@@ -811,7 +858,8 @@ input{
     justify-content: flex-start;
     align-items: flex-start;
 }
-.links ul{
+
+.links ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -819,11 +867,14 @@ input{
     font-size: x-small;
     font-family: var(--Primaryfontfamily);
     color: var(--secondarecolor);
+    cursor: pointer;
 }
-.link_list{
+
+.link_list {
     width: fit-content;
 }
-.links h3{
+
+.links h3 {
     text-align: center;
     color: var(--secondarecolor);
     font-size: small;
@@ -831,39 +882,46 @@ input{
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
-.footer_botom{
+
+.footer_botom {
     text-align: center;
     color: var(--secondarecolor);
     font-size: x-small;
     font-family: var(--Primaryfontfamily);
     padding: 32px 0;
 }
-@media screen and ( min-width:0 ) and ( max-width:700px ){
-    .footer .continer{
+
+@media screen and (min-width:0) and (max-width:700px) {
+    .footer .continer {
         width: 95%;
     }
-    .footer_top{
+
+    .footer_top {
         flex-direction: column;
     }
-    .Get_started{
+
+    .Get_started {
         border-right: none;
         border-bottom: solid 1px var(--secondarecolor);
         width: 100%;
         margin: 0;
         margin-top: 32px;
     }
-    .Get_started a{
+
+    .Get_started a {
         margin-bottom: 30px;
     }
-    .links{
+
+    .links {
         flex-wrap: wrap;
         margin-left: 0;
         margin-top: 30px;
         margin-bottom: 30px;
     }
 }
-@media screen and ( min-width:701px ) and ( max-width:950px ){
-    .footer .continer{
+
+@media screen and (min-width:701px) and (max-width:950px) {
+    .footer .continer {
         width: 95%;
     }
 
